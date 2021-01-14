@@ -62,7 +62,7 @@ function App() {
         <div className={classes.demo}>
           <List dense={dense}>
             <ListItem button>
-              <ListItemText primary="Single-line item" />
+              <ListItemText primary="Single-line item has been added" />
             </ListItem>
           </List>
         </div>
