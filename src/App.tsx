@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
 function App() {
   const classes = useStyles();
   const [dense, setDense] = React.useState(false);
+  console.log(setDense)
 
   return (
     <div className="App">
