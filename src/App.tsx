@@ -47,13 +47,11 @@ function App() {
             className={classes.input}
             id="standard-basic"
             label="Your task here..."
-            inputRef={taskRef}
           />
           {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
           <Button
             variant="contained"
             color="secondary"
-            onClick={addTaskHandler}
           >
             Add
           </Button>
