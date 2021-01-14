@@ -40,7 +40,7 @@ function App() {
     <div className="App">
       <Container maxWidth="sm">
         <Typography variant="h1" component="h2" gutterBottom>
-          TODO LIST for learning
+          TODO LIST for Deploying ON PR and Commit
         </Typography>
 
         <form className={classes.root} noValidate autoComplete="off">
