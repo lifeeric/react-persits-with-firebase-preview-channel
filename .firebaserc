@@ -1,10 +1,6 @@
 {
-  "projects": {
-    "default": "fb-clone-f8d28"
-  },
   "hosting": {
     "site": "preview-channel-3883",
-    "public": "public",
+    "public": "public"
   }
-
 }
