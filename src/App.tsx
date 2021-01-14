@@ -10,8 +10,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 import "./App.css";
 
-import { useSelector, useDispatch } from "react-redux";
-import { ADD_TASK, RM_TASK, COMPLETE_TASK } from "./store/action";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -36,19 +34,6 @@ const useStyles = makeStyles((theme: Theme) =>
 function App() {
   const classes = useStyles();
   const [dense, setDense] = React.useState(false);
-  const todolist = useSelector((state) => state);
-  const dispatch = useDispatch();
-  const taskRef = React.useRef<HTMLInputElement>(null);
-
-  const addTaskHandler = async () => {
-    if (taskRef.current) {
-      let value = taskRef.current && taskRef.current.value;
-      await dispatch({ value, type: ADD_TASK });
-      taskRef.current.value = "";
-    }
-  };
-
-  console.log(todolist);
 
   return (
     <div className="App">
@@ -77,11 +62,9 @@ function App() {
         {/* Tasks */}
         <div className={classes.demo}>
           <List dense={dense}>
-            {todolist.todolist.map((item: any, index: number) => (
-              <ListItem button>
-                <ListItemText primary="Single-line item" />
-              </ListItem>
-            ))}
+            <ListItem button>
+              <ListItemText primary="Single-line item" />
+            </ListItem>
           </List>
         </div>
       </Container>
