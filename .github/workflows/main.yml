@@ -2,8 +2,10 @@ name: Build and deploy
 
 on:
   push:
-    branches: [ main ]
-    
+    branches: [main]
+  pull_request:
+    branches: [main]
+
   # Run workflow manually
   workflow_dispatch:
 
@@ -39,5 +41,5 @@ jobs:
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
-        env: 
+        env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
