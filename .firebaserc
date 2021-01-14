@@ -2,5 +2,8 @@
   "hosting": {
     "site": "preview-channel-3883",
     "public": "public"
+  },
+  "projects": {
+    "default": "fb-clone-f8d28"
   }
 }
