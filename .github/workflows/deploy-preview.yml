@@ -18,4 +18,4 @@ jobs:
           #repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_TOKEN }}"
           expires: 30d
-          projectId: your-Firebase-project-ID
+          projectId: preview-channel-3883
