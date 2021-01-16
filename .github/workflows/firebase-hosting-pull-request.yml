@@ -18,5 +18,3 @@ jobs:
           projectId: fb-clone-f8d28
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
-         
-
