@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - env: REACT_APP_TEST: '${{ secrets.REACT_APP_TEST }}'
       - run: yarn && yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -16,5 +17,5 @@ jobs:
           projectId: fb-clone-f8d28
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
-          REACT_APP_TEST: '${{ secrets.REACT_APP_TEST }}'
-          
+         
+
