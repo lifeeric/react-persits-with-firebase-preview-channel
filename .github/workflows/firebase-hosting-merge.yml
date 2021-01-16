@@ -9,10 +9,10 @@ name: Deploy to Firebase Hosting on merge
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    env: 
+      REACT_APP_TEST: '${{ secrets.REACT_APP_TEST }}'
     steps:
       - uses: actions/checkout@v2
-        env: 
-          REACT_APP_TEST: '${{ secrets.REACT_APP_TEST }}'
       - run: yarn && yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
