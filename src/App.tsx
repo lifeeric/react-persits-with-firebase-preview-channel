@@ -36,11 +36,14 @@ function App() {
   const [dense, setDense] = React.useState(false);
   console.log(setDense)
 
+console.log(process.env.REACT_APP_TEST);
+if(process.env.REACT_APP_TEST !== 'HERE') return <h1>NOT FOUND ENV</h1>
+
   return (
     <div className="App">
       <Container maxWidth="sm">
         <Typography variant="h1" component="h2" gutterBottom>
-          TODO LIST for learning
+          TODO LIST for Redux
         </Typography>
 
         <form className={classes.root} noValidate autoComplete="off">
