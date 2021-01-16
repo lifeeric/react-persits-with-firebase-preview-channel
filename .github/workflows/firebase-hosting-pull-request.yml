@@ -6,6 +6,8 @@ name: Deploy to Firebase Hosting on PR
 jobs:
   build_and_preview:
     runs-on: ubuntu-latest
+    env: 
+      REACT_APP_TEST: '${{ secrets.REACT_APP_TEST }}'
     steps:
       - uses: actions/checkout@v2
         env: 
